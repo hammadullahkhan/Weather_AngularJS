@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
+
+<body ng-app="Weather" >
+
+
+<div  ng-controller="WeatherController as weather">
+
+    <hr>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-lg-12">
+                <input type='text' id='city' ng-model="weather.cityName">
+                <input type='radio' id='opt' ng-model="weather.unit" value="metric" > Celsius
+                <input type='radio' id='opt' ng-model="weather.unit" value="imperial"> Fahrenheit
+                <input type='button' id='btn' value='GET' ng-click="weather.getCityWeather(weather.cityName,weather.unit)">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-4 show-grid" ng-repeat="item in weather.cityWeather">
+            <weather-data cw="item"></weather-data>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-resource.min.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

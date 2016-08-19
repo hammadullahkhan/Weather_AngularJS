@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-2">Date</div>
+    <div class="col-xs-4" ng-bind="cw.dt*1000 | date : format('fullDate')"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Clouds</div>
+    <div class="col-xs-2" ng-bind="cw.clouds"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Deg</div>
+    <div class="col-xs-2" ng-bind="cw.deg"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Humidity</div>
+    <div class="col-xs-2" ng-bind="cw.humidity"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Pressure</div>
+    <div class="col-xs-2" ng-bind="cw.pressure"></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">Minimum</div>
+    <div class="col-xs-2" ng-bind="cw.temp.min"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Maximum</div>
+    <div class="col-xs-2" ng-bind="cw.temp.max"></div>
+</div>
+
+<div class="row">
+    <div class="col-xs-2">Day</div>
+    <div class="col-xs-2" ng-bind="cw.temp.day"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Morning</div>
+    <div class="col-xs-2" ng-bind="cw.temp.morn"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Evening</div>
+    <div class="col-xs-2" ng-bind="cw.temp.eve"></div>
+</div>
+<div class="row">
+    <div class="col-xs-2">Night</div>
+    <div class="col-xs-2" ng-bind="cw.pressure"></div>
+</div>
